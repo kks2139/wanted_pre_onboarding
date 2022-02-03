@@ -12,12 +12,13 @@ code {
     monospace;
 }
 
-* {
+*, *:focus, *:hover {
   box-sizing: border-box;
+  outline:none;
 }
 
 :root {
-  --color-main: #6d33ff;
+  --color-main: #5b19ff;
   --color-gray: #cccccc;
 }
 
@@ -28,6 +29,10 @@ h1,h2,h3,h4,h5,h6 {
 button {
   border: 0;
   cursor: pointer;
+}
+
+input {
+  border: 0;
 }
 
 .modal {
