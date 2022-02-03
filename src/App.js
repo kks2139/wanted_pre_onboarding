@@ -4,6 +4,7 @@ import {css} from '@emotion/react';
 import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
 import Tab from "./component/Tab";
+import Tag from "./component/Tag";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <div>Tab menu TWO</div>
         <div>Tab menu THREE</div>
       </Tab>
+      <Tag/>
     </div>
   );
 }

@@ -15,18 +15,6 @@ function Tab({children}){
         .tab-box {
             width: 100%;
             display: flex;
-
-            .tab {
-                flex-grow: 1;
-                height: 40px;
-                background-color: var(--color-gray);
-                color: gray;
-                padding: 0 15px;
-                font-size: 16px;
-                font-weight: 500;
-                text-align: left;
-                transition: .2s;
-            }
         }
 
         .content {
@@ -69,7 +57,7 @@ function TabButton({onClickTab, index, isSelected, text}) {
         font-size: 16px;
         font-weight: 500;
         text-align: left;
-        transition: .2s;
+        transition: .1s;
 
         ${isSelected ? `
             background-color: var(--color-main);
