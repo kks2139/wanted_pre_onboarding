@@ -5,6 +5,10 @@ import {css} from '@emotion/react';
 function Toggle(){
     const [isOn, setIsOn] = useState(false);
 
+    const onClick = ()=>{
+        setIsOn(!isOn);
+    }
+
     const style = css`
         display: flex;
         flex-direction: column;
@@ -17,7 +21,7 @@ function Toggle(){
             align-items: center;
             width: 60px;
             height: 27px;
-            background-color: #cccccc;
+            background-color: var(--color-gray);
             background-image: linear-gradient(0, var(--color-main), var(--color-main));
             background-position: ${isOn ? '0' : '-60px'}, 0;
             background-repeat: no-repeat;
@@ -47,10 +51,6 @@ function Toggle(){
             margin-top: 10px;
         }
     `;
-
-    const onClick = ()=>{
-        setIsOn(!isOn);
-    }
 
     return(
         <div css={style}>

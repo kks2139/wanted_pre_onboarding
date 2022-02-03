@@ -3,6 +3,7 @@ import React from "react";
 import {css} from '@emotion/react';
 import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
+import Tab from "./component/Tab";
 
 function App() {
 
@@ -19,6 +20,11 @@ function App() {
     <div css={style}>
       <Toggle/>
       <Modal/>
+      <Tab>
+        <div>Tab menu ONE</div>
+        <div>Tab menu TWO</div>
+        <div>Tab menu THREE</div>
+      </Tab>
     </div>
   );
 }

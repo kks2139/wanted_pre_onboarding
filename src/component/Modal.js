@@ -13,26 +13,20 @@ function Modal(){
             border-radius: 30px;
             color: white;
         }
-
-        .message {
-            width: 200px;
-            height: 80px;
-            background-color: white;
-        }
     `;
 
-    const onClick = ()=>{
+    const setOnOff = ()=>{
         setIsOn(pre => !pre);
     }
 
     return(
         <div css={style}>
-            <button className='button' onClick={onClick}>Open Modal</button>
+            <button className='button' onClick={setOnOff}>Open Modal</button>
             {ReactDOM.createPortal(
                 <>
                     {isOn && 
                         <div className='modal'>
-                            <MessageBox onClose={onClick}/>
+                            <MessageBox onClose={setOnOff}/>
                         </div>
                     }
                 </>,
