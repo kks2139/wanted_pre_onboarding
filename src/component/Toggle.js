@@ -10,7 +10,6 @@ function Toggle(){
         flex-direction: column;
         align-items: center;
         width: 150px;
-        margin: 50px;
 
         .wrapper {
             position: relative;
