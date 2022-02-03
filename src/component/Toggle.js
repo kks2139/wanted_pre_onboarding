@@ -6,16 +6,25 @@ function Toggle(){
     const [isOn, setIsOn] = useState(false);
 
     const style = css`
-        position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        width: 60px;
-        height: 27px;
-        background-color: #cccccc;
-        border-radius: 40px;
-        margin: 100px;
-        transition: .3s;
-        cursor: pointer;
+        width: 150px;
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 60px;
+            height: 27px;
+            background-color: #cccccc;
+            background-image: linear-gradient(0, var(--color-main), var(--color-main));
+            background-position: ${isOn ? '0' : '-60px'}, 0;
+            background-repeat: no-repeat;
+            border-radius: 40px;
+            transition: .3s;
+            cursor: pointer;
+        }
         
         .circle {
             position: absolute;
@@ -24,13 +33,18 @@ function Toggle(){
             height: 20px;
             background-color: white;
             transition: linear .2s;
+
+           &.on {
+                left: 35px;
+            }
+
+            &.off {
+                left: 5px;
+            }
         }
 
-        .on {
-            left: 37px;
-        }
-        .off {
-            left: 3px;
+        span {
+            margin-top: 10px;
         }
     `;
 
@@ -39,8 +53,11 @@ function Toggle(){
     }
 
     return(
-        <div css={style} onClick={onClick}>
-            <div className={`circle ${isOn ? 'on' : 'off'}`}></div>
+        <div css={style}>
+            <div className='wrapper' onClick={onClick}>
+                <div className={`circle ${isOn ? 'on' : 'off'}`}></div>
+            </div>
+            <span>Toggle Switch {isOn ? 'ON' : 'OFF'}</span>
         </div>
     );
 }
