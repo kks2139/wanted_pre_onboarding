@@ -36,6 +36,7 @@ function Tag(){
         padding: 7px;
         width: 600px;
         height: 50px;
+        overflow-x: auto;
 
         &:focus-within {
             border-color: var(--color-main);

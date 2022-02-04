@@ -11,7 +11,7 @@ function App() {
 
   const style = css`
     min-height: 100vh;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
