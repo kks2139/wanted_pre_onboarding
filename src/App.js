@@ -5,6 +5,7 @@ import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
 import Tab from "./component/Tab";
 import Tag from "./component/Tag";
+import AutoComplete from "./component/AutoComplete";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <div>Tab menu THREE</div>
       </Tab>
       <Tag/>
+      <AutoComplete/>
     </div>
   );
 }

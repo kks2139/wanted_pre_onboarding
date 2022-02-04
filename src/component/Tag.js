@@ -5,8 +5,8 @@ import {css} from '@emotion/react';
 function Tag(){
     const [input, setInput] = useState('');
     const [textList, setTextList] = useState([
-        {text: 'CodeStates', id: 1234},
-        {text: 'JJang', id: 12345},
+        {text: 'CodeStates', id: 1111},
+        {text: 'JJang', id: 2222},
     ]);
 
     const onChange = (e)=>{
@@ -85,6 +85,7 @@ function TaggedText({textId, text, onClickRemove}){
         border-radius: 8px;
         color: white;
         margin-right: 8px;
+        box-shadow: inset 0 0 10px -2px black;
 
         span {
             margin-right: 8px;
