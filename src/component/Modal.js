@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
@@ -18,6 +18,10 @@ function Modal(){
     const setOnOff = ()=>{
         setIsOn(pre => !pre);
     }
+
+    useEffect(()=>{
+        document.documentElement.style.overflow = isOn ? 'hidden' : 'auto';
+    }, [isOn]);
 
     return(
         <div css={style}>
