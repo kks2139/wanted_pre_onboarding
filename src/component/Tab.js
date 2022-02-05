@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import {css} from '@emotion/react';
 
 function Tab({children}){
-    const [selectedIndex, setSelectedIndex] = useState(0); 
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const childs = Array(children.length).fill(0); 
 
     const onClickTab = (index)=>{
         setSelectedIndex(index);
@@ -29,7 +30,7 @@ function Tab({children}){
     return(
         <div css={style}>
             <div className='tab-box'>
-                {Array(children.length).fill(0).map((el, i)=> (
+                {childs.map((el, i)=> (
                     <TabButton 
                         key={i} 
                         onClickTab={onClickTab} 
