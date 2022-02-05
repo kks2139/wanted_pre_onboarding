@@ -6,6 +6,8 @@ import Toggle from "./component/Toggle";
 import Tab from "./component/Tab";
 import Tag from "./component/Tag";
 import AutoComplete from "./component/AutoComplete";
+import ClickToEdit from "./component/ClickToEdit";
+import Wrapper from "./component/Wrapper";
 
 function App() {
 
@@ -14,21 +16,38 @@ function App() {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
   `;
 
   return (
     <div css={style}>
-      <Toggle/>
-      <Modal/>
-      <Tab>
-        <div>Tab menu ONE</div>
-        <div>Tab menu TWO</div>
-        <div>Tab menu THREE</div>
-      </Tab>
-      <Tag/>
-      <AutoComplete/>
+      <Wrapper title="Toggle">
+        <Toggle/>
+      </Wrapper>
+      
+      <Wrapper title="Modal">
+        <Modal/>  
+      </Wrapper>
+
+      <Wrapper title="Tab">
+        <Tab>
+          <div>Tab menu ONE</div>
+          <div>Tab menu TWO</div>
+          <div>Tab menu THREE</div>
+        </Tab>  
+      </Wrapper>
+
+      <Wrapper title="Tag">
+        <Tag/>
+      </Wrapper>
+
+      <Wrapper title="AutoComplete">
+        <AutoComplete/>
+      </Wrapper>
+
+      <Wrapper title="ClickToEdit">
+        <ClickToEdit/>
+      </Wrapper>
     </div>
   );
 }
