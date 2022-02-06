@@ -26,7 +26,8 @@ function AutoComplete(){
     }
 
     const filterText = (value)=>{
-        const filtered = TEST_LIST.filter(str => str.indexOf(value || null) > -1);
+        const searchText = value ? value.toLowerCase() : null;
+        const filtered = TEST_LIST.filter(str => str.toLowerCase().indexOf(searchText) > -1);
         setFilteredList(filtered);
     }
 
@@ -86,7 +87,7 @@ function AutoComplete(){
                 value={input}/>
             <ul className='text-box'>
                 {filteredList.map((txt, i) => (
-                    <li key={i} tabIndex={0}>{txt}</li>
+                    <li key={i} tabIndex={-1}>{txt}</li>
                 ))}
             </ul>
         </div>
