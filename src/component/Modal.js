@@ -63,6 +63,7 @@ function MessageBox({onClose}){
             color: var(--color-main);
         }
     `;
+    
     return (
         <div css={style}>
             <button className='close' onClick={onClose}>x</button>
