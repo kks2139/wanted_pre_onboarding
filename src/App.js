@@ -8,6 +8,7 @@ import Tag from "./component/Tag";
 import AutoComplete from "./component/AutoComplete";
 import ClickToEdit from "./component/ClickToEdit";
 import Wrapper from "./component/Wrapper";
+import Test from "./component/Test";
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
 
       <Wrapper title="ClickToEdit">
         <ClickToEdit/>
+      </Wrapper>
+
+      <Wrapper title="Test">
+        <Test/>
       </Wrapper>
     </div>
   );
